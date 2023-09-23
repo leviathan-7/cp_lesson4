@@ -150,3 +150,11 @@ test('no variable', () => {
     let result = MM.diff(text_of_function,text_of_variable)
     expect(result).toBe('Error');
 }); 
+
+test('no *', () => {
+    const MM = new MiniMaple()
+    let text_of_function = '- 3*xy^3'
+    let text_of_variable = 'x'
+    let result = MM.diff(text_of_function,text_of_variable)
+    expect(result).toBe('Error');
+}); 

@@ -114,12 +114,12 @@ class ItemPolynom{
         }
 
         let q1 = '*'+variable.Variable
-        if(this._Text.includes(q1)){
+        if(this._Text.includes(q1)&&(this._Text[this._Text.length-1]===variable.Variable)){
             let t = this._Text.replace(q1, '')
             return new ItemPolynom(t,this._Sign)
         }
         let q2 = variable.Variable+'*'
-        if(this._Text.includes(q2)){
+        if(this._Text.includes(q2)&&(this._Text[0]===variable.Variable)){
             let t = this._Text.replace(q2, '')
             return new ItemPolynom(t,this._Sign)
         }
